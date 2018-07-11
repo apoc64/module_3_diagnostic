@@ -21,6 +21,7 @@ feature "User can visit root page" do
     expect(page).to have_content("Distance")
     expect(page).to have_content("Fuel Type")
 
+    # expect css station_row 10 times
     # 10 results sortend by distance
   end
 end

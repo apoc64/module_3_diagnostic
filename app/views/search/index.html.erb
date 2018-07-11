@@ -1,5 +1,17 @@
 <h1>Results</h1>
 
-<table>
+<table class="results_table">
+  <tr>
+    <th>Station</th>
+    <th>Distance</th>
+    <th>Fuel Type</th>
+  </tr>
 
+  <% @presenter.stations.each do |station| %>
+    <tr class="station_row">
+      <td><%= station.name %></td>
+      <td><%= station.distance %></td>
+      <td><%= station.fuel_type %></td>
+    </tr>
+  <% end %>
 </table>
