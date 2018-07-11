@@ -23,7 +23,7 @@ feature "User can visit root page" do
     expect(page).to have_content("Access Time")
 
     # expect css station_row 10 times
-    # 10 results sorted by distance
+    expect(page).to have_selector('.station_row', count: 10)
     # All results electric/propane
     # All distances less than 6
   end
