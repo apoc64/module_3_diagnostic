@@ -5,7 +5,9 @@ class AltFuelPresenter
   end
 
   def stations
-    @results
+    @results.map do |station|
+      Station.new(station)
+    end
   end
 end
 # @token = current_user.oauthtoken
