@@ -2,18 +2,20 @@
 
 <table class="results_table">
   <tr>
-    <th>Station</th>
-    <th>Distance</th>
+    <th>Name</th>
+    <th>Address</th>
     <th>Fuel Type</th>
-    <th>Access Time</th>
+    <th>Distance</th>
+    <th>Access Times</th>
   </tr>
 
   <% @presenter.stations.each do |station| %>
     <tr class="station_row">
       <td><%= station.name %></td>
-      <td><%= station.distance %></td>
+      <td><%= station.address %></td>
       <td><%= station.fuel_type %></td>
-      <td><%= station.access_time %></td>
+      <td><%= station.distance %></td>
+      <td><%= station.access_times %></td>
     </tr>
   <% end %>
 </table>

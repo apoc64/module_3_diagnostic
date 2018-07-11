@@ -17,10 +17,11 @@ feature "User can visit root page" do
 
     expect(current_path).to eq('/search')
     expect(page).to have_css(".results_table")
-    expect(page).to have_content("Station")
-    expect(page).to have_content("Distance")
+    expect(page).to have_content("Name")
+    expect(page).to have_content("Address")
     expect(page).to have_content("Fuel Type")
-    expect(page).to have_content("Access Time")
+    expect(page).to have_content("Distance")
+    expect(page).to have_content("Access Times")
 
     # expect css station_row 10 times
     expect(page).to have_selector('.station_row', count: 10)
