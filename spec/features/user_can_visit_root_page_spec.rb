@@ -20,9 +20,12 @@ feature "User can visit root page" do
     expect(page).to have_content("Station")
     expect(page).to have_content("Distance")
     expect(page).to have_content("Fuel Type")
+    expect(page).to have_content("Access Time")
 
     # expect css station_row 10 times
-    # 10 results sortend by distance
+    # 10 results sorted by distance
+    # All results electric/propane
+    # All distances less than 6
   end
 end
 # ```As a user

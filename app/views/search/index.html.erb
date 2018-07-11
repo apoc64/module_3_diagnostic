@@ -5,6 +5,7 @@
     <th>Station</th>
     <th>Distance</th>
     <th>Fuel Type</th>
+    <th>Access Time</th>
   </tr>
 
   <% @presenter.stations.each do |station| %>
@@ -12,6 +13,7 @@
       <td><%= station.name %></td>
       <td><%= station.distance %></td>
       <td><%= station.fuel_type %></td>
+      <td><%= station.access_time %></td>
     </tr>
   <% end %>
 </table>
