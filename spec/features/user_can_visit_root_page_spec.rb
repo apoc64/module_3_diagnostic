@@ -16,7 +16,12 @@ feature "User can visit root page" do
     click_on 'Locate'
 
     expect(current_path).to eq('/search')
-    expect(page).to have_content("Results")
+    expect(page).to have_css(".results_table")
+    expect(page).to have_content("Station")
+    expect(page).to have_content("Distance")
+    expect(page).to have_content("Fuel Type")
+
+    # 10 results sortend by distance
   end
 end
 # ```As a user
